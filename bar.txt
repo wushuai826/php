@@ -1,7 +1,28 @@
-aaa
-bbb
-bcd
-shangchuandaowangshangqude
-wodejiazaishandong
+#!/bin/bash
+for i in {1..9};do
+    for j in {1..9};do
+        echo -n " $j*$i=$(($j*$i)) "
+	    if [ $j -eq $i ];then
+	        echo -e "\n"
+		break
+	    fi
+    done
+done
 
-aaaaaaaaaaaaaaaaaaabbbbbbbbbb
+
+
+
+#while语句
+a=1
+while [ $a -le 9 ];do
+    b=1
+    while [ $b -le 9 ];do
+        echo -n " $b*$a=$(($b*$a)) "
+	    if [ $b == $a ];then
+	        echo -e "\n"
+		break
+	    fi
+        let b++
+    done
+    let a++
+done
